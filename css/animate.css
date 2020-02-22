@@ -1,0 +1,31 @@
+@keyframes slideInDown {
+    from {
+        -webkit-transform: translate3d(0, -130%, 0);
+        transform: translate3d(0, -130%, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slideInDown {
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+}
+
+
+@keyframes slideOutUp {
+    from {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        visibility: hidden;
+        -webkit-transform: translate3d(0, -130%, 0);
+        transform: translate3d(0, -130%, 0);
+    }
+}

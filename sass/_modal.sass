@@ -1,0 +1,129 @@
+.search-form-modal
+    box-sizing: border-box;
+    position: absolute
+    left: calc( 50% - 284px )
+    width: 568px
+    margin: 0 auto
+    padding: 55px 
+    box-shadow: 0px 13px 20px 2px rgba(0,0,0,0.5)
+    z-index: 10
+    background-color: #fff
+
+    label
+        // padding: 0 55px
+        color: #000000
+        font-size: 14px
+        font-weight: 700
+        text-transform: uppercase
+
+    .form-date
+        max-width: 100%
+        margin-bottom: 30px
+        position: relative
+        display: flex
+        justify-content: space-between
+        
+        p 
+
+
+        input 
+            max-width: 346px
+            padding-left: 10px
+            flex-grow: 1
+            font-size: 14px
+            font-weight: 700
+            background-color: #f2f2f2 
+            // border: none
+
+    .form-date::after
+        content: ""
+        position: absolute
+        right: 10px
+        top: calc( 50% - 11px )
+        width: 22px
+        height: 22px
+        background-image: url(../img/calendar.png)
+        transition: 0.2s
+
+    .form-date:hover::after
+        background-image: url(../img/calendar-hover.png)
+
+    .form-date:focus-within::after
+        background-image: url(../img/calendar-active.png)
+
+    .form-number
+        display: flex
+        justify-content: space-between
+        // padding: 0 55px
+
+        label
+            width: 50%
+            display: flex
+            padding: 0
+
+            input 
+                color: #000000
+                font-size: 14px
+                font-weight: 700
+
+        label:last-child
+            p 
+                margin-left: auto
+
+    .form-submit
+        display: flex
+        margin-top: 55px
+        padding: 0px 
+        max-width: 100%
+
+        input 
+            width: 100%
+            height: 58px
+            color: #fff
+            font-size: 21px
+            font-weight: 700
+            background-color: #81b3d2
+            cursor: pointer
+            text-transform: uppercase
+            transition: 0.2s
+
+        input:hover
+            background-color: #669ec0
+
+        input:active
+            background-color: #5496bd
+            color: #87b5d1
+
+.modal-none
+    transform: translate3d(0, -130%, 0)
+    display: block
+    animation-name: slideOutUp
+    animation-duration: 1s
+
+.modal-on
+    display: block
+    animation-name: slideInDown
+    animation-duration: 1s
+
+@media (max-width: 608px)
+    .search-form-modal
+        width: 100%
+        left: 0
+        padding: 20px
+
+@media (max-width: 767px)
+    .form-number
+        display: flex
+        flex-wrap: wrap
+
+        label.form-number-inner
+            width: 100%
+            display: flex
+            justify-content: space-between
+
+        label.form-number-inner:last-child
+            margin-top: 20px
+            p
+                margin-left: 0
+
+

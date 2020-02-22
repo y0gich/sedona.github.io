@@ -1,0 +1,76 @@
+.footer
+    display: flex
+    justify-content: center
+    align-items: center
+    box-sizing: border-box
+    max-width: 100%
+    // min-height: 120px
+    padding: 50px 100px
+
+    &-hashtag
+        // margin-right: auto
+        color: #000000
+        font-size: 21px
+        font-weight: 700
+        line-height: 21px
+
+    &-social
+        flex-grow: 1
+        text-align: center
+
+        a
+            position: relative
+            display: inline-block
+            width: 46px
+            height: 48px
+            background-color: #81b3d2
+
+            .twitter-link
+                position: absolute
+                top: calc( 50% - 7.5px )
+                left: calc( 50% - 8.5px )
+
+            .fb-link
+                position: absolute
+                top: calc( 50% - 11px )
+                left: calc( 50% - 6px )
+
+            .youtube-link
+                position: absolute
+                top: calc( 50% - 8px )
+                left: calc( 50% - 10px )
+
+        a:hover
+            background-color: #669ec0
+
+        a:active
+            background-color: #5496bd
+
+    &-creator
+        // margin-left: auto
+        color: #000000
+        font-size: 21px
+        font-weight: 700
+        text-transform: uppercase
+
+        a
+            text-decoration: none
+            text-transform: none
+            color: #81b3d2
+
+
+@media (max-width: 767px)
+    .footer
+        padding: 25px 50px
+        flex-wrap: wrap
+
+        &-hashtag
+            width: 100%
+            text-align: center
+            margin-bottom: 20px
+        &-social
+            width: 100%
+            margin-bottom: 20px
+        &-creator
+            width: 100%
+            text-align: center

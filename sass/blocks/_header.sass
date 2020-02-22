@@ -1,0 +1,192 @@
+.header
+    max-width: 100%
+    background-image: url(../img/background-header.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+
+    &-nav
+        height: 56px
+        background-color: #ffffff
+        position: relative
+        z-index: 10
+
+        &_list
+            position: relative
+            z-index: 7
+            background-color: #fff
+            height: 56px
+            padding: 0px 70px
+            list-style: none
+            display: flex
+            justify-content: space-between
+
+            li 
+                width: 20%
+                height: 100%
+                text-align: center
+
+            & li:first-child
+                text-align: left
+
+            & li:last-child
+                text-align: right
+
+            a 
+                text-decoration: none
+                color: #000000
+                font-weight: 700
+                transition: 0.2s
+                line-height: 56px
+
+            a:hover 
+                color: #81b3d2
+
+            a:active
+                color: #000000
+                opacity: 0.3
+
+            .header-nav_burger
+                display: none
+                position: absolute
+                left: 15px
+                top: 50%
+                
+                span, span::before, span::after
+                    display: block
+                    position: absolute
+                    height: 4px
+                    background-color: #81b3d2
+                    width: 40px
+                    transition: 0.2s
+
+                span::before
+                    content: ''
+                    transform: translateY(-10px)
+
+                span::after
+                    content: ''
+                    transform: translateY(10px)
+
+            .header-nav_burger_active
+                span 
+                    height: 0
+
+                span::before
+                    transform: rotate(45deg)
+                    background-color: #81b3d2
+
+                span::after
+                    transform: rotate(-45deg)
+                    background-color: #81b3d2
+
+        &-burger_list
+            position: relative
+            z-index: 5
+            list-style: none
+            width: 100%
+            padding-top: 10px
+            background-color: #81b3d2
+            position: relative
+
+            li
+                text-align: center
+                background-color: #81b3d2
+                margin-bottom: 10px
+                padding-bottom: 10px
+                border-bottom: 1px solid rgba(0,0,0,0.15)
+            
+                a
+                    display: block
+                    text-decoration: none
+                    color: #ffffff
+                    font-weight: 700
+                    font-size: 21px
+
+                a:active
+                    color: #000000
+                    opacity: 0.3
+
+
+            li:last-child
+                margin-bottom: 0
+                border: none
+                box-shadow: inset 0px -7px 5px -6px rgba(0,0,0,0.35);
+
+    &-intro
+        margin-top: 75px
+
+        img 
+            display: block
+            margin: 0px auto 55px
+            max-width: 100%;
+            height: auto;
+
+        img:last-child
+            margin-bottom: 20px
+
+        
+        &::after
+            content: ""
+            display: block
+            padding-bottom: 4.75%
+            height: 0px
+            background-image: url(../img/header-border-bottom.png)
+            background-size: cover
+            background-repeat: no-repeat
+
+    &-bot 
+        background-color: #fff
+        position: relative
+
+        &_description
+            font-size: 21px
+            font-weight: 700
+            line-height: 26px
+            text-align: center
+            color: #333333
+            margin: 0
+            width: 450px
+            margin: 0px auto
+            padding-top: 60px
+
+        &_advantages 
+            font-weight: 400
+            line-height: 26px
+            text-align: center
+            color: #333333
+            margin: 0
+            width: 500px
+            margin: 0px auto
+            padding-top: 30px
+
+.burger_list-none
+    transform: translate3d(0, -130%, 0)
+    animation-name: slideOutUp
+    animation-duration: 0.5s
+
+.burger_list-on
+    animation-name: slideInDown
+    animation-duration: 0.5s
+
+
+// Media-queris
+
+@media (max-width: 767px) 
+    .header-nav_menu 
+        display: none
+
+    .header-nav_list a.header-nav_burger
+        display: block
+
+    .header-nav_list li.header-nav_item 
+        margin: 0 auto;
+        width: 138px;
+
+    .header-bot_description, .header-bot_advantages
+        width: calc( 100% - 20px )
+
+    .header-intro img
+        max-width: 90%
+
+    .header-nav-burger_list
+        list-style: none

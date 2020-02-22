@@ -1,0 +1,137 @@
+.main_number_plugin{
+    position: relative;
+}
+
+.classic .input_plugin_number{
+    box-sizing: border-box;
+    border-radius: 7px;
+    padding-left: 10px;
+    border: 1px solid #cccccc;
+    outline: none;
+}
+
+.classic .input_plugin_number:focus {
+    border-color: #bbbbbb;
+}
+
+.classic .plus_plugin_number{
+    width: 0px;
+    border: 5px solid transparent;
+    border-bottom: 7px solid #b5b5b5;
+    position: absolute;
+    top: 5%;
+    right: 5px;
+    cursor: pointer;
+}
+
+.classic .minus_plugin_number{
+    width: 0px;
+    border: 5px solid transparent;
+    border-top: 7px solid #b5b5b5;
+    position: absolute;
+    top: 60%;
+    right: 5px;
+    cursor: pointer;
+}
+
+.classic .plus_plugin_number:hover {
+    border-bottom-color: #6b6b6b;
+}
+
+.classic .minus_plugin_number:hover {
+    border-top-color: #6b6b6b;
+}
+
+
+.line{
+    width: 114px !important;
+    height: 38px;
+    margin-left: 25px;
+	display: flex;
+    justify-content: center;
+}
+
+.line .input_plugin_number{
+    max-width: 38px;
+    height: 38px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 7px;
+    /* border: 1px solid #cccccc; */
+    outline: none;
+}
+
+/* .line .input_plugin_number:focus {
+    border-color: #bbbbbb;
+} */
+
+.line .plus_plugin_number{
+    width: 38px;
+    height: 38px;
+    border: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+	background-color: none;
+}
+
+.line .plus_plugin_number:before{
+	content: '';
+    background-image: url(../img/plus.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 11px;
+    width: 11px;
+    position: absolute;
+    top: calc(50% - 5.5px);
+    left: calc(50% - 5.5px);
+    transition: 0.2s;
+}
+
+.line .minus_plugin_number{
+    width: 38px;
+    height: 38px;
+    /* border: 1px solid #0000007a; */
+    border-radius: 3px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+	background-color: none;
+}
+.line .minus_plugin_number:before{
+    content: '';
+    background-image: url(../img/minus.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 3px;
+    width: 30px;
+    position: absolute;
+    top: calc( 50% - 1.5px);
+    left: calc(50% - 6px);
+    transition: 0.2s;
+}
+
+.line .plus_plugin_number:hover:before {
+    background-image: url(../img/plus-hover.png)
+}
+
+.line .minus_plugin_number:hover:before {
+    background-image: url(../img/minus-hover.png);
+}
+
+.line .plus_plugin_number:active:before {
+    background-image: url(../img/plus-active.png)
+}
+
+.line .minus_plugin_number:active:before {
+    background-image: url(../img/minus-active.png);
+
+/* .line .plus_plugin_number:hover {
+    border-bottom-color: #6b6b6b;
+}
+
+.line .minus_plugin_number:hover {
+    border-top-color: #6b6b6b;
+} */
